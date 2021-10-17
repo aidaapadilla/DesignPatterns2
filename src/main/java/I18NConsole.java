@@ -1,13 +1,14 @@
+import java.io.PrintStream;
 import java.util.ResourceBundle;
 import java.util.Scanner;
+
 public class I18NConsole {
     public static void main(String[] args) {
         ResourceBundle rb_ca = ResourceBundle.getBundle("ca.properties");
         Scanner lector = new Scanner(System.in);
-        System.out.printf("%s: ",rb_ca.getString("K1"));
-        String res1=lector.nextLine(); //Si es un integer posem get int
-        System.out.printf("%s: ",rb_ca.getString("K2"));
-        String res2=lector.nextLine(); //Si es un integer posem get int
+        System.out.printf("%s: ",rb_ca.getString("K1=")); //No hauria de tenir el system ln preguntar
+        System.out.printf("%s: ",rb_ca.getString("K2="));
+
 
         ResourceBundle rb_en = ResourceBundle.getBundle("en.properties");
         Scanner lector2 = new Scanner(System.in);
